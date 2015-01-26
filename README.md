@@ -18,9 +18,48 @@ Caractéristiques du disque :
 - Vitesse de rotation de 5400 rpm (rotations par minute)
 - Temps de positionnement moyen de 10ms
 
-#### Question 1
+#### Question 2
 
-### Question 2
+#### Question 3
+
+#### Question 4
+
+#### Question 5
+
+#### Question 6
 
 Exercice 2
 ----------
+
+Exercice 3
+----------
+
+#### Expression 1
+
+```sql
+SELECT ∗
+FROM R
+WHERE Attribut = 50;
+```
+
+#### Expression 2
+
+SELECT ∗
+FROM R
+WHERE Attribut BETWEEN 50 AND 100;
+
+#### Expression 3
+
+SELECT ∗
+FROM R
+WHERE Attribut = 50 ORDER BY Attribut ;
+
+#### Expression 4
+
+INSERT INTO R values ();
+
+#### Expression 5
+
+DELETE
+FROM R
+WHERE Attribut = 50;
