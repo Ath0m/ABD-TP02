@@ -91,15 +91,69 @@ Tri externe sur ce fichier avec 3 buffers disponibles et 2 enregistrements sur c
 1. Tri de la mémoire principale  
 
 Les 2 premiers enregistrements sont lus, triés et écrits dans Tb1.  
+
+```
+Tb1:	1 	20
+Tb2:
+Tb3:
+```
+
 Les 2 enregistrements suivants sont lus, triés et écrits dans Tb2.  
+
+```
+Tb1:	1 	20
+Tb2:	2 	25
+Tb3:
+```
+
 Les 2 enregistrements suivants sont lus, triés et écrits dans Tb3.  
-On a donc :  
 
 ```
 Tb1:	1 	20
 Tb2:	2 	25
 Tb3:	3	30
 ```
+
+Les 2 enregistrements suivants sont lus, triés et ajoutés à Tb1.  
+
+```
+Tb1:	1 	20 	|	5 	40
+Tb2:	2 	25
+Tb3:	3	30
+```
+
+Les 2 enregistrements suivants sont lus, triés et ajoutés à Tb2.  
+
+```
+Tb1:	1 	20 	|	5 	40
+Tb2:	2 	25	|	6 	60
+Tb3:	3	30
+```
+
+Les 2 enregistrements suivants sont lus, triés et ajoutés à Tb3.  
+
+```
+Tb1:	1 	20 	|	5 	40
+Tb2:	2 	25	|	6 	60
+Tb3:	3	30	|	12 	15
+```
+
+Les 2 enregistrements suivants sont lus, triés et ajoutés à Tb1.
+
+```
+Tb1:	1 	20 	|	5 	40	|	17	21
+Tb2:	2 	25	|	6 	60
+Tb3:	3	30	|	12 	15
+```
+
+Les 2 derniers enregistrements sont lus, triés et ajoutés à Tb2.
+
+```
+Tb1:	1 	20 	|	5 	40	|	17	21
+Tb2:	2 	25	|	6 	60	|	45	50
+Tb3:	3	30	|	12 	15
+```
+
 
 Exercice 5
 ----------
