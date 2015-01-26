@@ -85,6 +85,22 @@ WHERE Attribut = 50;
 Exercice 4
 ----------
 
+Soit le fichier `⟨[20, 1], [25, 2], [30, 3], [40, 5], [60, 6], [12, 15], [21, 17], [50, 45]⟩`.  
+Tri externe sur ce fichier avec 3 buffers disponibles et 2 enregistrements sur chaque bloc :
+
+1. Tri de la mémoire principale  
+
+> Les 2 premiers enregistrements sont lus, triés et écrits dans Tb1.  
+> Les 2 enregistrements suivants sont lus, triés et écrits dans Tb2.  
+> Les 2 enregistrements suivants sont lus, triés et écrits dans Tb3.  
+> On a donc :  
+
+```
+Tb1:	1 	20
+Tb2:	2 	25
+Tb3:	3	30
+```
+
 Exercice 5
 ----------
 
