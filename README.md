@@ -40,7 +40,7 @@ Relation R(K,A,B,C) avec :
 - K : clé primaire, avec valeurs entières dans l'intervalle (1, 100000)  
 - A : attribut, avec valeurs entières distribuées uniforméments dans l'intervalle (1, 1000)  
 
-Relation mémorisée avec une structure de fichier tas (heap file) avec les valeurs de K et A non ordonnées en pages de taille Dp = 1024 o  
+Relation mémorisée avec une structure de fichier tas (heap file) avec les valeurs de K et A non ordonnées en pages de taille Dp = 1024 octets  
 Nombre d'enregistrements (record) sur le disque Ne = 100000  
 Taille d'un enregistrement (record) Lr = 100 Ko  
 
@@ -65,7 +65,7 @@ WHERE Attribut BETWEEN 50 AND 100;
 ```sql
 SELECT ∗
 FROM R
-WHERE Attribut = 50 ORDER BY Attribut ;
+WHERE Attribut = 50 ORDER BY Attribut;
 ```
 
 #### Expression 4
