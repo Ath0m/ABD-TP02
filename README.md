@@ -1,2 +1,16 @@
-# ABD-TP02
-Administration de Bases de Données - TP 02
+ABD - TP 02
+===========
+
+Auteurs
+-------
+
+- BERNARD Thomas
+- SAINT-OMER Anne-Sophie
+
+Exercice 1
+----------
+
+
+
+Exercice 2
+----------
