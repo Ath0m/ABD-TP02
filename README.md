@@ -44,22 +44,30 @@ WHERE Attribut = 50;
 
 #### Expression 2
 
+```sql
 SELECT ∗
 FROM R
 WHERE Attribut BETWEEN 50 AND 100;
+```
 
 #### Expression 3
 
+```sql
 SELECT ∗
 FROM R
 WHERE Attribut = 50 ORDER BY Attribut ;
+```
 
 #### Expression 4
 
+```sql
 INSERT INTO R values ();
+```
 
 #### Expression 5
 
+```sql
 DELETE
 FROM R
 WHERE Attribut = 50;
+```
