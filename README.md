@@ -18,9 +18,9 @@ Caractéristiques du disque :
 - Vitesse de rotation de 5400 rpm (rotations par minute)
 - Temps de positionnement moyen de 10ms
 
-## Question 1
+### Question 1
 
-## Question 2
+### Question 2
 
 Exercice 2
 ----------
