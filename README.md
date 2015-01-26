@@ -71,3 +71,19 @@ DELETE
 FROM R
 WHERE Attribut = 50;
 ```
+
+Exercice 4
+----------
+
+Exercice 5
+----------
+
+#### Question 1
+
+#### Question 2
+
+#### Question 3
+
+#### Question 4
+
+#### Question 5
