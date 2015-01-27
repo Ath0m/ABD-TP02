@@ -88,7 +88,7 @@ Exercice 4
 Soit le fichier `⟨[20,1],[25,2],[30,3],[40,5],[60,6],[12,15],[21,17],[50,45]⟩`.  
 Tri externe sur ce fichier avec 3 buffers disponibles et 2 enregistrements sur chaque bloc :
 
-1. Tri de la mémoire principale  
+**1. Tri de la mémoire principale**  
 
 Les 2 premiers enregistrements sont lus, triés et écrits dans Tb1.  
 
@@ -154,7 +154,7 @@ Tb2:	2 	25	|	6 	60	|	45	50
 Tb3:	3	30	|	12 	15
 ```
 
-2.	Fusion
+**2.	Fusion**  
 
 Construction d'un tas avec les premiers enregistrements de chaque buffer.
 
@@ -374,7 +374,7 @@ Ta1:	1 	2 	3 	20 	25 	30 	|	17	21	45	50
 Ta2:	5 	6 	12 	15 	40 	60
 ```
 
-3. Tri
+**3. Tri**  
 
 En utilisant un tas avec les deux premiers enregistrements de `Ta1` et `Ta2`, et en suivant le même principe de tri, on obtient :  
 
@@ -384,7 +384,7 @@ Tb2:	17 	21 	45 	50
 Tb3:
 ``` 
 
-4. Tri
+**4. Tri**  
 
 Même opération de tri pour obtenir le fichier final.
 
