@@ -31,6 +31,23 @@ Caractéristiques du disque :
 Exercice 2
 ----------
 
+Enregistrement de taille fixe :
+
+- Avantages :
+	- Simple à implémenter
+	- Une fois la base créée, il suffit de respecter la taille imposée aux enregistrements et aucune modification n'est nécesaire.
+
+- Inconvénient :
+	- Un nouvel enregistrement plus grand ne peut pas être inséré dans la table.
+
+Enregistrement de taille variable :
+
+- Avantage :
+	- On ne se soucie pas de la taille d'un nouvel enregistrement.
+
+- Inconvénient :
+	- Compliqué à implémenter.
+
 Exercice 3
 ----------
 
