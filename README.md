@@ -154,6 +154,243 @@ Tb2:	2 	25	|	6 	60	|	45	50
 Tb3:	3	30	|	12 	15
 ```
 
+2.	Fusion
+
+Construction d'un tas avec les premiers enregistrements de chaque buffer.
+
+```
+Tas:	1 	2 	3
+
+Tb1:	1 	20 	|	5 	40	|	17	21
+Tb2:	2 	25	|	6 	60	|	45	50
+Tb3:	3	30	|	12 	15
+```
+
+Le plus petit élément du tas est est retiré et ajouté à Ta1.  
+Ici, le plus petit élément est 1. Il appartenait à Tb1, donc on ajoute au tas l'élément suivant de Tb1.
+
+```
+Tas:	20 	2 	3
+
+Tb1:	 	20 	|	5 	40	|	17	21
+Tb2:	2 	25	|	6 	60	|	45	50
+Tb3:	3	30	|	12 	15
+
+Ta1:	1
+```
+
+On itére de nouveau, avec le nouvel élément le plus petit du tas.
+
+```
+Tas:	20 	25 	3
+
+Tb1:	 	20 	|	5 	40	|	17	21
+Tb2:	 	25	|	6 	60	|	45	50
+Tb3:	3	30	|	12 	15
+
+Ta1:	1 	2
+```
+
+On itére sur les enregistrements suivants.
+
+```
+Tas:	20 	25 	30
+
+Tb1:	 	20 	|	5 	40	|	17	21
+Tb2:	 	25	|	6 	60	|	45	50
+Tb3:		30	|	12 	15
+
+Ta1:	1 	2 	3
+```
+
+```
+Tas:	 	25 	30
+
+Tb1:	 	 	|	5 	40	|	17	21
+Tb2:	 	25	|	6 	60	|	45	50
+Tb3:		30	|	12 	15
+
+Ta1:	1 	2 	3 	20
+```
+
+```
+Tas:	 	 	30
+
+Tb1:	 	 	|	5 	40	|	17	21
+Tb2:	 		|	6 	60	|	45	50
+Tb3:		30	|	12 	15
+
+Ta1:	1 	2 	3 	20 	25
+```
+
+```
+Tas:	 	 	
+
+Tb1:	 	 	|	5 	40	|	17	21
+Tb2:	 		|	6 	60	|	45	50
+Tb3:			|	12 	15
+
+Ta1:	1 	2 	3 	20 	25 	30
+```
+
+On reconstruit le tas, et on ajoute les enregistrements suivants à Ta2.
+
+```
+Tas:	5 	6 	12
+
+Tb1:	 	 	|	5 	40	|	17	21
+Tb2:	 		|	6 	60	|	45	50
+Tb3:			|	12 	15
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	
+```
+
+```
+Tas:	40 	6 	12
+
+Tb1:	 	 	|	 	40	|	17	21
+Tb2:	 		|	6 	60	|	45	50
+Tb3:			|	12 	15
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5
+```
+
+```
+Tas:	40 	60 	12
+
+Tb1:	 	 	|	 	40	|	17	21
+Tb2:	 		|	 	60	|	45	50
+Tb3:			|	12 	15
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6
+```
+
+```
+Tas:	40 	60 	15
+
+Tb1:	 	 	|	 	40	|	17	21
+Tb2:	 		|	 	60	|	45	50
+Tb3:			|	 	15
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6 	12
+```
+
+```
+Tas:	40 	60 	
+
+Tb1:	 	 	|	 	40	|	17	21
+Tb2:	 		|	 	60	|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6 	12 	15
+```
+
+```
+Tas:	 	60 	
+
+Tb1:	 	 	|	 		|	17	21
+Tb2:	 		|	 	60	|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6 	12 	15 	40
+```
+
+```
+Tas:	 	 	
+
+Tb1:	 	 	|	 		|	17	21
+Tb2:	 		|	 		|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+On reconstruit le tas, et on ajoute les derniers enregistrements à Ta1.
+
+```
+Tas:	17 	45
+
+Tb1:	 	 	|	 		|	17	21
+Tb2:	 		|	 		|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+```
+Tas:	21 	45
+
+Tb1:	 	 	|	 		|		21
+Tb2:	 		|	 		|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30 	|	17
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+```
+Tas:	 	45
+
+Tb1:	 	 	|	 		|		
+Tb2:	 		|	 		|	45	50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30 	|	17	21
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+```
+Tas:	 	50
+
+Tb1:	 	 	|	 		|		
+Tb2:	 		|	 		|		50
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30 	|	17	21	45
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+```
+Tas:	 	
+
+Tb1:	 	 	|	 		|		
+Tb2:	 		|	 		|		
+Tb3:			|	 	
+
+Ta1:	1 	2 	3 	20 	25 	30 	|	17	21	45	50
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+```
+Ta1:	1 	2 	3 	20 	25 	30 	|	17	21	45	50
+Ta2:	5 	6 	12 	15 	40 	60
+```
+
+3. Tri
+
+En utilisant un tas avec les deux premiers enregistrements de `Ta1` et `Ta2`, et en suivant le même principe de tri, on obtient :  
+
+```
+Tb1:	1 	2 	3 	5 	6	12 	15 	20 	25 	30 	40 	60
+Tb2:	17 	21 	45 	50
+Tb3:
+``` 
+
+4. Tri
+
+Même opération de tri pour obtenir le fichier final.
+
+```
+Ta1:	1 	2 	3 	5 	6 	12 	15 	17 	20 	21 	25 	30 	40 	45 	50 	60
+``` 
 
 Exercice 5
 ----------
