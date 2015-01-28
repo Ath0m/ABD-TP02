@@ -111,6 +111,7 @@ Relation mémorisée avec une structure de fichier tas (heap file) avec les vale
 Nombre d'enregistrements (record) sur le disque Ne = 100000  
 Taille d'un enregistrement (record) Lr = 100 Ko  
 
+
 #### Expression 1
 
 ```sql
@@ -119,6 +120,30 @@ FROM R
 WHERE Attribut = 50;
 ```
 
+Pour K : 
+
+```sql
+SELECT *
+FROM R
+WHERE K = 50;
+```
+
+K est la clé primaire de la table R, elle est unique. 
+Une fois cette clé trouvée la recherche est terminée.
+
+Pour A : 
+
+```sql
+SELECT *
+FROM R
+WHERE A = 50;
+```
+
+A est un attribut de la table. Plusieurs enregistrements peuvent valoir 50.
+On doit absolument parcourir toute la table.
+
+
+
 #### Expression 2
 
 ```sql
@@ -126,6 +151,8 @@ SELECT ∗
 FROM R
 WHERE Attribut BETWEEN 50 AND 100;
 ```
+
+
 
 #### Expression 3
 
