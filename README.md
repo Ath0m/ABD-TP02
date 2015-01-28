@@ -499,7 +499,8 @@ Portion de l'arbre initial :
 	---------------------------------
 ```
 
-Ajout d'un tuple avec clé 26 à l’arbre :
+Ajout d'un tuple avec clé 26 à l’arbre :  
+La feuille amenée à contenir la clé 26 possède des emplacements libres, on peut donc se contenter de l'ajouter dans celle-ci, en respectant l'ordre établi.  
 
 ```
 	---------------------------------
