@@ -57,25 +57,25 @@ Un plateau possède 2000 pistes. Chaque piste d'un plateau correspond à un cyli
 
 #### Question 4
 
-256 n'est pas une taille de bloc valide car elle est inférieure à la taille d'un secteur. Elle ne peut donc pas être multiple de 512 octets.
+256 n'est pas une taille de bloc valide car elle est inférieure à la taille d'un secteur. Elle ne peut donc pas être multiple de 512 octets.  
 
-2048 est une taille de bloc valide. Cette taille est inférieure à la taille d'une piste. 
-Et 2048 / 512 = 4, 2048 est donc un multiple de 512 (taille d'un secteur). Le bloc correspondra à 4 secteurs.
+2048 est une taille de bloc valide. Cette taille est inférieure à la taille d'une piste.  
+Et 2048 / 512 = 4, 2048 est donc un multiple de 512 (taille d'un secteur). Le bloc correspondra à 4 secteurs.  
 
-51200 n'est pas une taille de bloc valide car cette taille est supérieure à la taille d'une piste.
+51200 n'est pas une taille de bloc valide car cette taille est supérieure à la taille d'une piste.  
 
 #### Question 5
 
-Le temps de latence est la demie-durée d'un tour.
+Le temps de latence est la demie-durée d'un tour.  
 
-(60 / Vitesse de rotation ) / 2
-= (60/5400) / 2
-= 0,00556 secondes
-= 5,56 millisecondes 
+(60 / Vitesse de rotation ) / 2  
+= (60/5400) / 2  
+= 0,00556 secondes  
+= 5,56 millisecondes   
 
 #### Question 6
 
-Capacité d'une piste  25 600 octets.
+Capacité d'une piste  25 600 octets.  
 Latence 5.56 ms
 
 Exercice 2
