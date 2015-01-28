@@ -73,11 +73,6 @@ Le temps de latence est la demie-durée d'un tour.
 = 0,00556 secondes  
 = 5,56 millisecondes   
 
-#### Question 6
-
-Capacité d'une piste  25 600 octets.  
-Latence 5.56 ms
-
 Exercice 2
 ----------
 
@@ -107,8 +102,8 @@ Relation R(K,A,B,C) avec :
 - K : clé primaire, avec valeurs entières dans l'intervalle (1, 100000)  
 - A : attribut, avec valeurs entières distribuées uniforméments dans l'intervalle (1, 1000)  
 
-**La valeur Dp de l'énoncé nous paraissait étrange (une taille de 1024 octets implique le stockage d'un enregistrement sur 100 blocs).**
-**Nous avons donc décidé de considérer une valeur de Dp égale à 1024 Ko.**
+**La valeur Dp de l'énoncé nous paraissait étrange (une taille de 1024 octets implique le stockage d'un enregistrement sur 100 blocs).**  
+**Nous avons donc décidé de considérer une valeur de Dp égale à 1024 Ko.**  
 Relation mémorisée avec une structure de fichier tas (heap file) avec les valeurs de K et A non ordonnées en pages de taille Dp = 1024 Ko  
 Nombre d'enregistrements (record) sur le disque Ne = 100000  
 Taille d'un enregistrement (record) Lr = 100 Ko  
@@ -128,8 +123,8 @@ FROM R
 WHERE K = 50;
 ```
 
-K est la clé primaire de la table R, elle est unique. 
-Une fois cette clé trouvée la recherche est terminée.
+K est la clé primaire de la table R, elle est unique.   
+Une fois cette clé trouvée la recherche est terminée.  
 
 
 
@@ -139,13 +134,13 @@ FROM R
 WHERE A = 50;
 ```
 
-A est un attribut de la table. Plusieurs enregistrements peuvent valoir 50.
-On doit absolument parcourir toute la table.
+A est un attribut de la table. Plusieurs enregistrements peuvent valoir 50.  
+On doit absolument parcourir toute la table.  
 
-Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.
-Il y aura donc 10 000 blocs.
-Le temps de lecture d'un bloc est de 0.015 secondes.
-10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.
+Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.  
+Il y aura donc 10 000 blocs.  
+Le temps de lecture d'un bloc est de 0.015 secondes.  
+10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.  
 
 
 
@@ -163,7 +158,7 @@ FROM R
 WHERE K BETWEEN 50 AND 100;
 ```
 
-On récupère 50 valeurs. On se doit de parcourir toute la table puisque les valeurs ne sont pas ordonnées.
+On récupère 50 valeurs. On se doit de parcourir toute la table puisque les valeurs ne sont pas ordonnées.  
 
 
 
@@ -173,12 +168,12 @@ FROM R
 WHERE A BETWEEN 50 AND 100;
 ```
 
-On parcourt tous les enregistrements, on récupère tous les enregistrements qui ont des valeurs entre 50 et 100.
+On parcourt tous les enregistrements, on récupère tous les enregistrements qui ont des valeurs entre 50 et 100.  
 
-Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.
-Il y aura donc 10 000 blocs.
-Le temps de lecture d'un bloc est de 0.015 secondes.
-10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.
+Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.  
+Il y aura donc 10 000 blocs.  
+Le temps de lecture d'un bloc est de 0.015 secondes.  
+10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.  
 
 
 
@@ -196,13 +191,13 @@ FROM R
 WHERE K = 50 ORDER BY K;
 ```
 
-Si on considère que la recherche se fait après le tri :
-On parcourt 50 valeurs puisque nous savons que l'enregistrement recherché est le 50 ème. 
+Si on considère que la recherche se fait après le tri :  
+On parcourt 50 valeurs puisque nous savons que l'enregistrement recherché est le 50 ème.  
 
-Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.
-Il y aura donc 10 000 blocs.
-Le temps de lecture d'un bloc est de 0.015 secondes.
-50 blocs x 0.015 secondes = 0.75 secondes = 750 ms.	
+Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.  
+Il y aura donc 10 000 blocs.  
+Le temps de lecture d'un bloc est de 0.015 secondes.  
+50 blocs x 0.015 secondes = 0.75 secondes = 750 ms.  
 
 ```sql
 SELECT ∗
@@ -210,13 +205,13 @@ FROM R
 WHERE A = 50 ORDER BY A;
 ```
 
-Si on considère que la recherche se fait après le tri :
-On parcourt toute la table. Toutes les valeurs correspondant à la valeur 50 se suivront.
+Si on considère que la recherche se fait après le tri :  
+On parcourt toute la table. Toutes les valeurs correspondant à la valeur 50 se suivront.  
 
-Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.
-Il y aura donc 10 000 blocs.
-Le temps de lecture d'un bloc est de 0.015 secondes.
-10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.
+Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.  
+Il y aura donc 10 000 blocs.  
+Le temps de lecture d'un bloc est de 0.015 secondes.  
+10 000 blocs x 0.015 secondes = 150 secondes = 2.5 minutes.  
 
 
 
@@ -226,12 +221,12 @@ Le temps de lecture d'un bloc est de 0.015 secondes.
 INSERT INTO R values ();
 ```
 
-L'insertion d'une valeur se fait à la suite de tous les autres enregistrements, de manière chronologique.
-On fera une simple écriture. 
+L'insertion d'une valeur se fait à la suite de tous les autres enregistrements, de manière chronologique.  
+On fera une simple écriture.  
 
 
-On estime le temps d'écriture à 0.015 secondes.
-Donc 0.015 secondes pour cette requête.
+On estime le temps d'écriture à 0.015 secondes.  
+Donc 0.015 secondes pour cette requête.  
 
 
 #### Expression 5
@@ -263,12 +258,12 @@ FROM A
 WHERE A = 50;
 ```
 
-On parcourt les enregistrements et on écrit les enregistrements égals à 50 comme "deleted".
+On parcourt les enregistrements et on écrit les enregistrements égals à 50 comme "deleted".  
 
-Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.
-Il y aura donc 10 000 blocs.
-Le temps de lecture d'un bloc est de 0.015 secondes. On estime le temps d'écriture à 0.015 secondes
-10 000 blocs x 0.015 secondes + 0.015 * N enregistrements concernés.
+Une page/ un bloc de 1024 Ko contient environ 10 enregistrements (10.24) puisque chaque enregistrement correspond à 100 Ko.  
+Il y aura donc 10 000 blocs.  
+Le temps de lecture d'un bloc est de 0.015 secondes. On estime le temps d'écriture à 0.015 secondes  
+10 000 blocs x 0.015 secondes + 0.015 * N enregistrements concernés.  
 
 
 
