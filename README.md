@@ -482,6 +482,8 @@ Ajout d'un tuple avec clé 26 à l’arbre :
 
 #### Question 2
 
+Portion de l'arbre initial :
+
 ```
 										Root
 										--------------------------
