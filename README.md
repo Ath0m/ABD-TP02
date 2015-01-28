@@ -20,31 +20,35 @@ Caractéristiques du disque :
 
 #### Question 2
 
+```
 		 1 secteur 		| 	512 octets
 	----------------------------------------------------
 		50 secteurs 	| 	50 * 512 = 25 600 octets
+```
 
-	On a donc 25 600 octets par piste.
+	On a donc 25 600 octets par piste.  
 	-> La capacité d'une piste est de 25 600 octets.
 
-
+```
 		   1 piste 		| 	25 600 octets
 	-------------------------------------------------------------
 		2000 pistes 	| 	2000 * 25 600 = 51 200 000 octets
+```
 
-	On a donc 51 200 000 octets par surface.
-	-> La capacité d'une surface est de 51 200 000 octets.
+	On a donc 51 200 000 octets par surface.  
+	-> La capacité d'une surface est de 51 200 000 octets.  
 
-	De plus, on considère qu'il y a une surface par plateau.
+	De plus, on considère qu'il y a une surface par plateau.  
 
-
+```
 		1 plateau 		|	51 200 000 octets
 	---------------------------------------------------------------
 		5 plateaux 		|	51 200 000 * 5 = 256 000 000 octets
+```
 
-	-> La capacité du disque est donc de 256 000 000 octets.
-		Soit 250 000 Ko.
-		Soit environ 244 Mo.
+	-> La capacité du disque est donc de 256 000 000 octets.  
+		Soit 250 000 Ko.  
+		Soit environ 244 Mo.  
 
 #### Question 3
 
