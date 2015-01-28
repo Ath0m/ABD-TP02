@@ -192,7 +192,7 @@ WHERE A = 50 ORDER BY A;
 ```
 
 Si on considère que la recherche se fait après le tri :
-On parcourt toute la table. Toutes les valeurs correspondant à la valeur 50 se trouveront à la suite les unes des autres.
+On parcourt toute la table. Toutes les valeurs correspondant à la valeur 50 se suivront.
 
 
 
@@ -228,7 +228,7 @@ FROM A
 WHERE A = 50;
 ```
 
-On parcourt les enregistrements et on écrit les enregistrements comme "deleted".
+On parcourt les enregistrements et on écrit les enregistrements égals à 50 comme "deleted".
 
 
 
