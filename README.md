@@ -500,7 +500,7 @@ Portion de l'arbre initial :
 ```
 
 Ajout d'un tuple avec clé 26 à l’arbre :  
-La feuille amenée à contenir la clé 26 possède des emplacements libres, on peut donc se contenter de l'ajouter dans celle-ci, en respectant l'ordre établi.  
+La feuille amenée à contenir la clé 26 possède des emplacements libres, on peut donc se contenter de l'ajouter dans celle-ci, en respectant l'ordre établit.  
 
 ```
 	---------------------------------
@@ -532,6 +532,26 @@ Portion de l'arbre initial :
 ```
 
 Ajout d'un tuple avec clé 4 à l’arbre :
+La feuille amenée à contenir la clé 4 est déjà complète. On doit donc procéder à une redistribution des éléments de cette feuille avec la feuille voisine.
+
+```
+										Root
+										--------------------------
+										|| 50 ||    ||    ||    ||
+										--------------------------
+										|
+										|
+										V
+							--------------------------
+							||  6 || 18 || 32 || 40 ||
+							--------------------------
+							|	   |	 |
+		+-------------------+	   |	 +-------------------+
+		V 						   V 						 V
+---------------------		---------------------		---------------------
+|  1 |  2 |  4 |  5 |		|  6 |  8 | 10 |    |		| 18 | 27 |    |    |
+---------------------		---------------------		---------------------
+```
 
 #### Question 3
 
