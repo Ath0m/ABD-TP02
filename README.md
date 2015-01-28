@@ -120,8 +120,6 @@ FROM R
 WHERE Attribut = 50;
 ```
 
-Pour K : 
-
 ```sql
 SELECT *
 FROM R
@@ -131,7 +129,6 @@ WHERE K = 50;
 K est la clé primaire de la table R, elle est unique. 
 Une fois cette clé trouvée la recherche est terminée.
 
-Pour A : 
 
 ```sql
 SELECT *
@@ -152,6 +149,23 @@ FROM R
 WHERE Attribut BETWEEN 50 AND 100;
 ```
 
+```sql
+SELECT ∗
+FROM R
+WHERE K BETWEEN 50 AND 100;
+```
+
+On récupère 50 valeurs. On se doit de parcourir toute la table puisque les valeurs ne sont pas ordonnées.
+
+
+```sql
+SELECT ∗
+FROM R
+WHERE A BETWEEN 50 AND 100;
+```
+
+On parcourt tous les enregistrements, on récupère tous les enregistrements qui ont des valeurs entre 50 et 100.
+
 
 
 #### Expression 3
@@ -162,11 +176,35 @@ FROM R
 WHERE Attribut = 50 ORDER BY Attribut;
 ```
 
+```sql
+SELECT ∗
+FROM R
+WHERE K = 50 ORDER BY K;
+```
+
+Si on considère que la recherche se fait après le tri :
+On parcourt 50 valeurs puisque nous savons que l'enregistrement recherché est le 50 ème. 
+
+```sql
+SELECT ∗
+FROM R
+WHERE A = 50 ORDER BY A;
+```
+
+Si on considère que la recherche se fait après le tri :
+On parcourt toute la table. Toutes les valeurs correspondant à la valeur 50 se trouveront à la suite les unes des autres.
+
+
+
 #### Expression 4
 
 ```sql
 INSERT INTO R values ();
 ```
+
+L'insertion d'une valeur se fait à la suite de tous les autres enregistrements, de manière chronologique.
+On fera une simple écriture. 
+
 
 #### Expression 5
 
@@ -175,6 +213,24 @@ DELETE
 FROM R
 WHERE Attribut = 50;
 ```
+
+```sql
+DELETE
+FROM K
+WHERE K = 50;
+```
+
+On parcourt les enregistrements et on écrit l'enregistrement comme "deleted".
+
+```sql
+DELETE
+FROM A
+WHERE A = 50;
+```
+
+On parcourt les enregistrements et on écrit les enregistrements comme "deleted".
+
+
 
 Exercice 4
 ----------
