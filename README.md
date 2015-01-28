@@ -20,13 +20,73 @@ Caractéristiques du disque :
 
 #### Question 2
 
+     
+            1 secteur  	|     512 octets
+	--------------------------------------------
+	   50 secteurs 	|   50 * 512 = 25 600 octets
+
+
+ 	On a donc 25 600 octets par piste
+	-> La capacité d'une piste est de 25 600 octets.
+
+
+
+	     1 piste  	|     25 600 octets
+	-----------------------------------------------------
+	  2000 pistes 	|  2000 * 25 600 = 51 200 000 octets
+
+
+	On a donc 51 200 000 octets par surface.
+	-> La capacité d'une surface est de 51 200 000 octets.
+
+	De plus, on considère qu'il y a une surface par plateau.
+
+
+	   1 plateau  	|     51 200 000 octets
+	---------------------------------------------------
+	   5 plateaux	|   51 200 000 * 5 = 256 000 000 octets
+
+
+	-> La capacité du disque est donc de 256 000 000 octets.
+	   Soit 250 000 Ko.
+	   Soit environ 244 Mo.
+
+
 #### Question 3
+
+
+Un plateau possède 2000 pistes. Chaque piste d'un plateau correspond à un cylindre du disque.
+
+2000 pistes <-> 2000 cylindres.
+
 
 #### Question 4
 
+
+256 n'est pas une taille de bloc valide car elle est inférieure à la taille d'un secteur. Elle ne peut donc pas être multiple de 512 octets.
+
+2048 est une taille de bloc valide. Cette taille est inférieure à la taille d'une piste. 
+Et 2048 / 512 = 4, 2048 est donc un multiple de 512 (taille d'un secteur). Le bloc correspondra à 4 secteurs.
+
+51200 n'est pas une taille de bloc valide car cette taille est supérieure à la taille d'une piste.
+
+
 #### Question 5
 
+
+Le temps de latence est la demie-durée d'un tour.
+
+  (60 / Vitesse de rotation ) / 2
+= (60/5400) / 2
+= 0,00556 secondes
+= 5,56 millisecondes 
+
+
 #### Question 6
+
+Capacité d'une piste  25 600 octets.
+Latence 5.56 ms
+
 
 Exercice 2
 ----------
