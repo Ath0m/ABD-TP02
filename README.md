@@ -107,6 +107,8 @@ Relation R(K,A,B,C) avec :
 - K : clé primaire, avec valeurs entières dans l'intervalle (1, 100000)  
 - A : attribut, avec valeurs entières distribuées uniforméments dans l'intervalle (1, 1000)  
 
+**La valeur Dp de l'énoncé nous paraissait étrange (une taille de 1024 octets implique le stockage d'un enregistrement sur 100 blocs).**
+**Nous avons donc décidé de considérer une valeur de Dp égale à 1024 Ko.**
 Relation mémorisée avec une structure de fichier tas (heap file) avec les valeurs de K et A non ordonnées en pages de taille Dp = 1024 Ko  
 Nombre d'enregistrements (record) sur le disque Ne = 100000  
 Taille d'un enregistrement (record) Lr = 100 Ko  
@@ -585,7 +587,7 @@ Exercice 5
 
 #### Question 1
 
-Portion de l'arbre initial :
+Portion concernée de l'arbre initial :
 
 ```
 	---------------------------------
@@ -604,7 +606,7 @@ La feuille amenée à contenir la clé 26 possède des emplacements libres, on p
 
 #### Question 2
 
-Portion de l'arbre initial :
+Portion concernée de l'arbre initial :
 
 ```
 										Root
@@ -649,7 +651,7 @@ La feuille amenée à contenir la clé 4 est déjà complète. On doit donc proc
 
 #### Question 3
 
-Portion de l'arbre initial :
+Portion concernée de l'arbre initial :
 
 ```
 										Root
@@ -674,7 +676,7 @@ Suppression d'un tuple avec clé 8 de l’arbre si on assume une redistribution 
 
 #### Question 4
 
-Portion de l'arbre initial :
+Portion concernée de l'arbre initial :
 
 ```
 										Root
