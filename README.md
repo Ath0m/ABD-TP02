@@ -464,6 +464,18 @@ Exercice 5
 
 #### Question 1
 
+Arbre initial :
+
+```
+	|  18* 	|  27*	|		|		|
+```
+
+Ajout d'un tuple avec clé 26 à l’arbre :
+
+```
+	|  18* 	|  26*	|  27*	|		|
+```
+
 #### Question 2
 
 #### Question 3
