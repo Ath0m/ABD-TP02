@@ -1,0 +1,33 @@
+Correction exercice 3
+
+Pas de modification, uniquement lecture. 
+Accéder à la page qui contient la valeur cherchée. 
+Si "ORDER BY" dans la requête, ça ne change rien. 
+
+1 - 2 - 3.
+
+  Pour K, en moyenne :
+  
+    Nombre de pages / 2
+    
+  Pour A, en moyenne : 
+  
+    Nombre de pages
+    
+    
+------------------------------------------------------------------------------------------------------
+
+
+  En ce qui concerne le INSERT, il suffit juste d'aller à l'endroit donné et d'écrire. 
+  Le coût pour la recherche d'un point d'insertion est de 1. Le coût pour écrire est de 1.
+  
+4. Cout = 2
+ 
+ --------------------------------------------------------------------------------------------------------
+ 
+ Recherche + écriture. 
+
+5.  Nombre de page/ 2 + 1
+            ou
+    Nombre de pages + 1.
+    
